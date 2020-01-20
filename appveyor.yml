@@ -1,0 +1,36 @@
+version: '0.10.{build}'
+image: Visual Studio 2019
+clone_depth: 1
+
+assembly_info:
+    patch: true
+    file: AssemblyInfo.*
+    assembly_version: "{version}"
+    assembly_file_version: "{version}"
+  
+before_build:
+    - cmd: dotnet --version
+
+build_script:
+    - cmd: dotnet publish ./vs2019/volante.csproj -c Release
+
+after_test:
+    - cmd: nuget pack ./vs2019/volante.nuspec -version %appveyor_build_version%
+
+artifacts:
+  - path: vs2019\bin\Release\net45\volante.dll
+    name: volante.dll
+  - path: '**\*.nupkg'
+
+cache:
+  - '%LocalAppData%\NuGet\Cache'    # NuGet < v3
+  - '%LocalAppData%\NuGet\v3-cache' # NuGet v3
+
+deploy:
+    provider: NuGet
+    api_key:
+        secure: PXXLxEGnQq6BGX+BDU+ll6IJplwZ3MdiSyGM2VTtP67ru2QvCyBXACs68quskxGo
+    skip_symbols: true
+    artifact: /.*\.nupkg/
+    on: 
+        branch: master

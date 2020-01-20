@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>volante</id>
+    <version>$version$</version>
+    <authors>Krzysztof Kowalczyk</authors>
+    <license type="expression">MIT-0</license>
+    <projectUrl>https://github.com/viceroypenguin/volante</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Volante is a free, small, fast, object-oriented, NoSQL, embeddable database for .NET.</description>
+    <copyright>Copyright 2017 Krzysztof Kowalczyk</copyright>
+    <tags>.NET embedded database NoSQL</tags>
+
+    <dependencies>
+      <group targetFramework="net45"></group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\net45\volante.dll" target="lib\net45" />
+  </files>
+</package>

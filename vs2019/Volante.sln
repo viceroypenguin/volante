@@ -1,12 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests.csproj", "{5865280E-C479-50BF-8DFB-F31EF9CE4CF0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{7E0E96EA-EAED-1486-F305-A05C5F647BE7} = {7E0E96EA-EAED-1486-F305-A05C5F647BE7}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volante", "Volante.csproj", "{7E0E96EA-EAED-1486-F305-A05C5F647BE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Volante", "Volante.csproj", "{7E0E96EA-EAED-1486-F305-A05C5F647BE7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryScan", "DirectoryScan.csproj", "{5F849C1E-CB44-1855-947F-61D200FF5C31}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -46,6 +48,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransparentGuess", "TransparentGuess.csproj", "{DE78E01D-CA71-FF6F-F3A3-E4F4DFFBDE7B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{7E0E96EA-EAED-1486-F305-A05C5F647BE7} = {7E0E96EA-EAED-1486-F305-A05C5F647BE7}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A159894-7BC6-4944-BB40-1E5486A99326}"
+	ProjectSection(SolutionItems) = preProject
+		..\appveyor.yml = ..\appveyor.yml
 	EndProjectSection
 EndProject
 Global
@@ -97,5 +104,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {447196B1-8082-4B91-843D-D8FF3A4D2FEF}
 	EndGlobalSection
 EndGlobal
