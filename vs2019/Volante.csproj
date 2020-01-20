@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net45</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <LangVersion>latest</LangVersion>
+    <WarningLevel>4</WarningLevel>
+
+    <DefineConstants>WITH_PATRICIA;WITH_REPLICATION;WITH_OLD_BTREE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../src/**/*.cs" />
+  </ItemGroup>
+  
+</Project>
